@@ -16,7 +16,7 @@ public class TestController {
     @Resource
     private UserMapper userMapper;
 
-    @RequestMapping(value = "/test.json", method = RequestMethod.POST)
+    @RequestMapping(value = "/test.json", method = RequestMethod.GET)
     @ResponseBody
     public String refreshSpecialHall() {
         return JSON.toJSONString(userMapper.selectByPrimaryKey(1));
