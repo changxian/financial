@@ -1,4 +1,4 @@
-package cx.rcd.financial;
+package cx.rcd.financial.redis;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -38,7 +38,8 @@ public class PersonDao {
 	}
 	
 	public Person getPerson(){//8
-		return (Person) valOps.get("1");
+		Object obj = valOps.get("1");
+		return (Person) obj;
 	}
 
 }

@@ -1,6 +1,7 @@
-package cx.rcd.financial;
+package cx.rcd.financial.redis;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class Person implements Serializable{
 
@@ -9,15 +10,17 @@ public class Person implements Serializable{
 	private String id;
 	private String name;
 	private Integer age;
+	private Date date;
 	
 	public Person() {
 		super();
 	}
-	public Person(String id, String name, Integer age) {
+	public Person(String id, String name, Integer age, Date date) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.age = age;
+		this.date = date;
 	}
 	public String getId() {
 		return id;
@@ -37,7 +40,12 @@ public class Person implements Serializable{
 	public void setAge(Integer age) {
 		this.age = age;
 	}
-	
-	
 
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
 }
